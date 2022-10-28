@@ -1,7 +1,9 @@
-import mercadolibre from  './mercadolibre'
+const MercadoLibre = require ('./mercadoLibre')
 
-const clients = {
-    mercadolibre: mercadolibre
+function Client(){
+    this.Mercadolibre = function(){
+        return new MercadoLibre();
+    };
 }
-
-export default clients
+ 
+module.exports = Client
